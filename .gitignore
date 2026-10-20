@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+.vercel
+node_modules/
+*.log
+
+.agents/
+mcp/
+demos/
+scripts/editor.js
