@@ -32,41 +32,125 @@
 
   <main>
     <!-- ====================================================================
-         OPEN, HUMBLE CONTACT CANVAS
+         1. CONTACT HERO (LIGHT THEME)
          ==================================================================== -->
     <section class="hero-block" data-scroll-theme="light">
-      <div class="container contact-open-canvas">
-        <div>
-          <div class="eyebrow" data-reveal>Contact · Open Channel</div>
+      <div class="container">
+        <div class="eyebrow" data-reveal>Contact · Placeholder</div>
 
-          <h1 class="display-hero" data-reveal-lines>
-            <span class="line-mask"><span class="line-inner">Let’s start a</span></span>
-            <span class="line-mask"><span class="line-inner">conversation.</span></span>
-          </h1>
+        <h1 class="display-hero" data-reveal-lines style="max-width: 17ch;">
+          <span class="line-mask"><span class="line-inner">Say hello.</span></span>
+          <span class="line-mask"><span class="line-inner">Let’s talk ideas.</span></span>
+        </h1>
 
-          <p class="lead-copy" style="margin-top: 28px;" data-reveal style="--reveal-delay: 160ms;">
-            This space is intentionally kept open. Reach out anytime—every message goes directly to Hermann &amp; Amine in Darmstadt.
+        <div class="hero-footer-row">
+          <p class="lead-copy" data-reveal style="--reveal-delay: 180ms;">
+            Whether you have a small software problem, need a clean website, or just want to grab a coffee in Darmstadt—drop us a line. Every message is read by <strong>Hermann and Amine</strong> personally.
           </p>
+
+          <div class="btn-group" data-reveal style="--reveal-delay: 280ms;">
+            <a href="#message-box" class="btn-pill">
+              <span>Write a message</span>
+              <span class="btn-pill-arrow">↓</span>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="contact-minimal-grid" data-reveal style="--reveal-delay: 240ms;">
-          <div>
-            <div class="contact-slot-label">Email</div>
-            <div class="contact-slot-value">
-              <a href="mailto:kontakt@braincel.de">kontakt@braincel.de</a>
+    <!-- ====================================================================
+         2. PLACEHOLDER CHANNELS & MESSAGE CARD (SCROLL SWITCH TO DARK THEME)
+         ==================================================================== -->
+    <section class="section-space section-border-top" id="message-box" data-scroll-theme="dark">
+      <div class="container">
+        <div class="diptych">
+          <div class="diptych-copy" data-reveal>
+            <div class="eyebrow">Direct Channels · Placeholder</div>
+            <h2 class="display-section" data-reveal-lines>
+              <span class="line-mask"><span class="line-inner">Reach us</span></span>
+              <span class="line-mask"><span class="line-inner">directly.</span></span>
+            </h2>
+            <p class="lead-copy" style="font-size: 1.05rem;">
+              These fields are currently set up as clean placeholders. Soon you’ll find our final direct email, phone number, and scheduling links right here.
+            </p>
+
+            <div class="contact-minimal-grid" style="grid-template-columns: 1fr; gap: 22px; margin-top: 12px;">
+              <div>
+                <div class="contact-slot-label">01 · Email (Placeholder)</div>
+                <div class="contact-slot-value">hello@braincel.de</div>
+              </div>
+
+              <div>
+                <div class="contact-slot-label">02 · Phone / WhatsApp (Placeholder)</div>
+                <div class="contact-slot-value">+49 151 [0000 0000]</div>
+              </div>
+
+              <div>
+                <div class="contact-slot-label">03 · Base</div>
+                <div class="contact-slot-value">Darmstadt &amp; Region (+15 km)</div>
+              </div>
             </div>
           </div>
 
-          <div>
-            <div class="contact-slot-label">Location</div>
-            <div class="contact-slot-value">Darmstadt (+15 km)</div>
+          <!-- Placeholder Interactive Contact Card -->
+          <div class="contact-placeholder-card" data-reveal style="--reveal-delay: 150ms;">
+            <div class="eyebrow" style="margin-bottom: 0;">Quick Note · Placeholder Form</div>
+
+            <form onsubmit="event.preventDefault(); this.querySelector('.form-status').textContent = 'Placeholder submitted! We will wire this up to your inbox whenever you are ready.';">
+              <div style="display: flex; flex-direction: column; gap: 18px;">
+                <div class="placeholder-input-group">
+                  <label for="ph-name">Your Name</label>
+                  <input type="text" id="ph-name" class="placeholder-input" placeholder="Jane Doe / Local Business">
+                </div>
+
+                <div class="placeholder-input-group">
+                  <label for="ph-email">Email or Phone</label>
+                  <input type="text" id="ph-email" class="placeholder-input" placeholder="jane@example.com">
+                </div>
+
+                <div class="placeholder-input-group">
+                  <label for="ph-msg">What’s on your mind?</label>
+                  <textarea id="ph-msg" rows="4" class="placeholder-input" placeholder="Tell us a little bit about your idea or project..."></textarea>
+                </div>
+
+                <div style="margin-top: 6px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+                  <button type="submit" class="btn-pill">
+                    <span>Send Message (Placeholder)</span>
+                    <span class="btn-pill-arrow">→</span>
+                  </button>
+                  <span class="form-status" style="font-family: var(--font-mono); font-size: 0.76rem; color: #10b981;"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. IMPRESSUM & LEGAL PLACEHOLDER (SCROLL SWITCH TO WARM STONE THEME)
+         ==================================================================== -->
+    <section class="section-space section-border-top" data-scroll-theme="stone">
+      <div class="container">
+        <div class="diptych">
+          <div class="diptych-copy" data-reveal>
+            <div class="eyebrow">Legal · Placeholder</div>
+            <h2 class="display-section" data-reveal-lines>
+              <span class="line-mask"><span class="line-inner">Impressum &amp;</span></span>
+              <span class="line-mask"><span class="line-inner">Privacy.</span></span>
+            </h2>
           </div>
 
-          <div>
-            <div class="contact-slot-label">Details / Impressum</div>
-            <div class="contact-slot-value" style="color: var(--theme-muted); font-size: 1.02rem;">
-              [Open for custom contact &amp; legal details]
-            </div>
+          <div class="diptych-copy" data-reveal style="--reveal-delay: 140ms;">
+            <p class="lead-copy" style="font-size: 1.05rem;">
+              <strong>Braincel (Placeholder Notice — § 5 DDG)</strong><br>
+              Hermann [Last Name Placeholder] &amp; Amine Cheikhrouhou<br>
+              [Street &amp; House Number Placeholder]<br>
+              64283 Darmstadt, Germany
+            </p>
+            <p class="lead-copy" style="font-size: 0.96rem;">
+              <strong>Privacy Principle:</strong> We don’t use tracking cookies or ad analytics, and we never share your contact details with third parties.
+            </p>
           </div>
         </div>
       </div>

@@ -1129,7 +1129,7 @@ textarea {
 }
 
 /* ==========================================================================
-   CONTACT PAGE — HUMBLE, MINIMAL & OPEN
+   CONTACT PAGE — HUMBLE, MINIMAL & PLACEHOLDER READY
    ========================================================================== */
 
 .contact-open-canvas {
@@ -1161,6 +1161,45 @@ textarea {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+.contact-placeholder-card {
+  border-radius: 20px;
+  border: 1px solid var(--theme-line);
+  background: var(--theme-surface);
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.placeholder-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.placeholder-input-group label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--theme-muted);
+}
+
+.placeholder-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--theme-line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--theme-fg);
+  transition: border-color 0.3s ease;
+}
+
+.placeholder-input:focus {
+  outline: none;
+  border-color: var(--theme-accent);
 }
 
 /* ==========================================================================
