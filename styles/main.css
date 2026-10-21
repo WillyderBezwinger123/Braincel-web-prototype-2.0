@@ -699,225 +699,365 @@ textarea {
 }
 
 /* ==========================================================================
-   SOFTWARE PAGE — ANIMATED OFFERING MODULES
+   SOFTWARE PAGE — BLUEPRINT ARCHITECTURE
+   1. Centered Title
+   2. Full-Width Animated App Reel
+   3. Featured Software Showcase (like Home)
+   4. Open Website Blueprint Showcase
    ========================================================================== */
 
-.offerings-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(24px, 3vw, 40px);
+.software-header-section {
+  padding-top: clamp(56px, 8vw, 108px);
+  padding-bottom: clamp(40px, 5vw, 68px);
+  text-align: center;
 }
 
-.offering-card {
+.software-title-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 48px;
+}
+
+.software-title-box .eyebrow {
+  margin-bottom: 0;
+}
+
+.software-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+/* 2. Full-Width Animated App Showcase Strip */
+.projects-reel-section {
+  padding-block: clamp(44px, 6vw, 76px);
+  border-top: 1px solid var(--theme-line);
+  border-bottom: 1px solid var(--theme-line);
+  overflow: hidden;
+  position: relative;
+}
+
+.reel-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--theme-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.reel-viewport {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.reel-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: reelGlide 38s linear infinite;
+  padding-block: 8px;
+}
+
+.reel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes reelGlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.reel-app-card {
+  width: 340px;
+  border-radius: 18px;
   border: 1px solid var(--theme-line);
-  border-radius: 20px;
   background: var(--theme-surface);
-  padding: clamp(28px, 3.5vw, 44px);
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
-  transition: transform 0.5s var(--ease-out-expo), border-color 0.4s ease, background-color 0.4s ease;
+  gap: 18px;
+  transition:
+    transform 0.45s var(--ease-out-expo),
+    border-color 0.35s ease,
+    background-color 0.35s ease;
+  flex-shrink: 0;
 }
 
-.offering-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--theme-muted);
+.reel-app-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--theme-fg);
   background: var(--theme-surface-hover);
 }
 
-/* Live CSS/SVG Animation Canvas inside each Offering Card */
-.offering-visual {
-  height: 210px;
-  border-radius: 14px;
-  background: #121316;
+.reel-app-preview {
+  height: 148px;
+  border-radius: 12px;
+  background: #131518;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  color: #f4f3ef;
 }
 
-/* Visual 1: Morphing Wireframe Layout */
-.anim-layout-box {
-  width: 100%;
-  max-width: 280px;
+.reel-app-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #989690;
+}
+
+.reel-mini-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: auto;
+}
+
+.reel-bar {
+  height: 7px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  position: relative;
+}
+
+.reel-bar-fill {
+  position: absolute;
+  inset: 0;
+  width: 65%;
+  background: #10b981;
+  border-radius: 99px;
+  animation: morphWidth 3.6s ease-in-out infinite;
+}
+
+.reel-app-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--theme-muted);
+}
+
+.reel-app-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-block: 4px;
+}
+
+.reel-app-desc {
+  font-size: 0.88rem;
+  color: var(--theme-muted);
+  line-height: 1.5;
+}
+
+/* 3. Interactive TaskCal Showcase (Software Section 1) */
+.tc-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 14px;
+}
+
+.tc-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.anim-bar-top {
-  height: 12px;
-  width: 45%;
-  border-radius: 99px;
-  background: #10b981;
-  animation: morphWidth 4s ease-in-out infinite;
-}
-
-.anim-bento-row {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 10px;
-  height: 92px;
-}
-
-.anim-bento-cell {
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  position: relative;
-  overflow: hidden;
-}
-
-.anim-bento-cell::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-  transform: translateX(-100%);
-  animation: shimmerSweep 3.2s infinite;
-}
-
-@keyframes morphWidth {
-  0%, 100% { width: 42%; }
-  50% { width: 78%; }
-}
-
-@keyframes shimmerSweep {
-  100% { transform: translateX(100%); }
-}
-
-/* Visual 2: Local Visibility Radar Rings */
-.anim-radar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  position: relative;
+.tc-panel-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.anim-radar::before,
-.anim-radar::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  animation: radarExpand 3.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-.anim-radar::after {
-  animation-delay: 1.7s;
-}
-
-.anim-radar-core {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 18px #10b981;
-}
-
-@keyframes radarExpand {
-  0% { width: 16px; height: 16px; opacity: 0.95; }
-  100% { width: 148px; height: 148px; opacity: 0; }
-}
-
-/* Visual 3: AI Workflow Node Pipeline */
-.anim-pipeline {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  justify-content: center;
-}
-
-.pipe-node {
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: #e4e3de;
-  animation: nodeHighlight 3s infinite;
+  font-size: 0.68rem;
+  color: #989690;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.pipe-node:nth-child(3) { animation-delay: 1s; }
-.pipe-node:nth-child(5) { animation-delay: 2s; }
-
-.pipe-connector {
-  width: 28px;
-  height: 1.5px;
-  background: rgba(255, 255, 255, 0.18);
-  position: relative;
-  overflow: hidden;
-}
-
-.pipe-connector::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #10b981;
-  transform: translateX(-100%);
-  animation: shimmerSweep 1.5s infinite;
-}
-
-@keyframes nodeHighlight {
-  0%, 100% { border-color: rgba(255, 255, 255, 0.14); color: #989690; }
-  40% { border-color: #10b981; color: #ffffff; transform: translateY(-2px); }
-}
-
-/* Visual 4: Cross-Platform Sync Cards */
-.anim-sync-stack {
+.tc-task-item {
   display: flex;
-  gap: 14px;
-  align-items: flex-end;
-}
-
-.sync-device {
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 11px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.35s var(--ease-out-expo);
+}
+
+.tc-task-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tc-check {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.tc-task-item.is-synced {
+  border-color: rgba(16, 185, 129, 0.65);
+  background: rgba(16, 185, 129, 0.09);
+}
+
+.tc-task-item.is-synced .tc-check {
+  background: #10b981;
+  border-color: #10b981;
+  color: #0d0e10;
+}
+
+.tc-time-pill {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: #a1a1aa;
+}
+
+/* 4. Open Website Blueprint Showcase (Software Section 2) */
+.web-blueprint-canvas {
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.web-bp-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.web-bp-logo-placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: #e4e3de;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.web-bp-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.web-bp-pills span {
+  width: 34px;
+  height: 6px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.web-bp-hero-slot {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  align-items: center;
+  padding-block: 8px;
+}
+
+.web-bp-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.web-bp-line {
+  height: 10px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.14);
+  transition: width 0.6s var(--ease-out-expo), background-color 0.4s ease;
+}
+
+.web-bp-line--accent {
+  width: 68%;
+  background: rgba(16, 185, 129, 0.65);
+}
+
+.web-bp-open-card {
+  min-height: 112px;
+  border-radius: 10px;
+  border: 1px dashed rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #10b981;
+}
+
+.web-bp-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.web-bp-mini-slot {
   padding: 10px;
-  transition: transform 0.4s ease;
-  animation: floatDevice 3.6s ease-in-out infinite;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: #989690;
+  transition: all 0.4s ease;
 }
 
-.sync-device--desktop {
-  width: 140px;
-  height: 96px;
-}
-
-.sync-device--mobile {
-  width: 64px;
-  height: 106px;
-  animation-delay: 0.6s;
-  border-color: rgba(16, 185, 129, 0.55);
-}
-
-@keyframes floatDevice {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-
-.offering-title {
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin-bottom: 10px;
-}
-
-.offering-desc {
-  font-size: 0.96rem;
-  color: var(--theme-muted);
-  line-height: 1.6;
+.web-bp-mini-slot.is-highlighted {
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #f4f3ef;
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -1085,5 +1225,11 @@ textarea {
 
   .pv-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tc-layout,
+  .web-bp-hero-slot,
+  .web-bp-cards-row {
+    grid-template-columns: 1fr;
   }
 }

@@ -52,7 +52,6 @@
 
   // 3. Instrument-Style Masked Line & Element Reveal (useReveal)
   function initScrollReveals() {
-    // Wrap each .line-mask with staggered transition delay
     document.querySelectorAll("[data-reveal-lines]").forEach((block) => {
       const lines = block.querySelectorAll(".line-inner");
       lines.forEach((line, idx) => {
@@ -203,11 +202,107 @@
       applyScenario(scenarios[index]);
     }, 3200);
 
-    // Allow manual hover interaction on tiles
     tiles.forEach((tile) => {
       tile.addEventListener("mouseenter", () => {
         tiles.forEach((t) => t.classList.remove("is-active"));
         tile.classList.add("is-active");
+      });
+    });
+
+    window.addEventListener("beforeunload", () => clearInterval(intervalId));
+  }
+
+  // 8. Interactive TaskCal Showcase Simulation (Software Page)
+  function initTaskCalShowcase() {
+    const stage = document.getElementById("tc-interactive-stage");
+    const statusEl = document.getElementById("tc-live-status");
+    const badgeEl = document.getElementById("tc-sync-badge");
+    if (!stage) return;
+
+    const desktopItems = stage.querySelectorAll("[data-task-idx]");
+    const mirrorItems = stage.querySelectorAll("[data-mirror-idx]");
+    if (!desktopItems.length || !mirrorItems.length) return;
+
+    let stepIdx = 2;
+
+    function toggleTaskPair(idx, forceState) {
+      const dItem = stage.querySelector(`[data-task-idx="${idx}"]`);
+      const mItem = stage.querySelector(`[data-mirror-idx="${idx}"]`);
+      if (!dItem || !mItem) return;
+
+      const nextState =
+        typeof forceState === "boolean"
+          ? forceState
+          : !dItem.classList.contains("is-synced");
+
+      dItem.classList.toggle("is-synced", nextState);
+      mItem.classList.toggle("is-synced", nextState);
+
+      const pill = mItem.querySelector(".tc-time-pill");
+      if (pill) {
+        pill.textContent = nextState ? "Synced ✓" : "Pending";
+      }
+
+      if (badgeEl) {
+        const latency = Math.floor(11 + Math.random() * 12);
+        badgeEl.textContent = `FIREBASE SYNC · ${latency}ms`;
+      }
+      if (statusEl) {
+        statusEl.textContent = `State synced across Windows & Android (Task #0${Number(idx) + 1})`;
+      }
+    }
+
+    const intervalId = setInterval(() => {
+      toggleTaskPair(stepIdx);
+      stepIdx = (stepIdx + 1) % desktopItems.length;
+    }, 2800);
+
+    stage.querySelectorAll(".tc-task-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        const idx =
+          item.getAttribute("data-task-idx") ||
+          item.getAttribute("data-mirror-idx");
+        if (idx !== null) {
+          toggleTaskPair(Number(idx));
+        }
+      });
+    });
+
+    window.addEventListener("beforeunload", () => clearInterval(intervalId));
+  }
+
+  // 9. Interactive Open Website Blueprint Showcase (Software Page)
+  function initWebBlueprintShowcase() {
+    const modules = document.querySelectorAll("#web-bp-modules .web-bp-mini-slot");
+    const statusEl = document.getElementById("web-bp-status");
+    if (!modules.length) return;
+
+    const descriptions = [
+      "Blueprint Module 01: Fast, Mobile-First One-Pager & Clear Brand Story",
+      "Blueprint Module 02: Curated Google Business Profile & Local Darmstadt SEO",
+      "Blueprint Module 03: Optional Online Inquiry, Booking & AI Triage Extras"
+    ];
+
+    let current = 0;
+
+    function activateModule(i) {
+      modules.forEach((mod, idx) => {
+        mod.classList.toggle("is-highlighted", idx === i);
+      });
+      if (statusEl && descriptions[i]) {
+        statusEl.textContent = descriptions[i];
+      }
+    }
+
+    const intervalId = setInterval(() => {
+      current = (current + 1) % modules.length;
+      activateModule(current);
+    }, 3000);
+
+    modules.forEach((mod, idx) => {
+      mod.addEventListener("mouseenter", () => {
+        current = idx;
+        activateModule(idx);
       });
     });
 
@@ -222,6 +317,8 @@
     initGlanceCounters();
     initMagneticButtons();
     initPhotoVaultShowcase();
+    initTaskCalShowcase();
+    initWebBlueprintShowcase();
   }
 
   if (document.readyState === "loading") {

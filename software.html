@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Software &amp; Offerings — Braincel</title>
-  <meta name="description" content="Explore Braincel's software offerings, web systems, local visibility tools, and applied AI solutions.">
+  <title>Software — Braincel</title>
+  <meta name="description" content="Explore the apps, software systems, and websites we build at Braincel in Darmstadt.">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="page-entering" data-theme="dark">
+<body class="page-entering" data-theme="light">
 
   <!-- ====================================================================
        GLOBAL HEADER
@@ -32,202 +32,520 @@
 
   <main>
     <!-- ====================================================================
-         1. SOFTWARE HERO (DARK THEME)
+         1. TOP CENTERED "SOFTWARE" HEADER BOX
          ==================================================================== -->
-    <section class="hero-block" data-scroll-theme="dark">
+    <section class="software-header-section" data-scroll-theme="light">
       <div class="container">
-        <div class="eyebrow" data-reveal>Software &amp; Offerings</div>
-
-        <h1 class="display-hero" data-reveal-lines>
-          <span class="line-mask"><span class="line-inner">Practical systems,</span></span>
-          <span class="line-mask"><span class="line-inner">built to work.</span></span>
-        </h1>
-
-        <div class="hero-footer-row">
-          <p class="lead-copy" data-reveal style="--reveal-delay: 180ms;">
-            We focus on small, fast, working software instead of heavy slide decks. From modern mobile websites and local search visibility to custom AI tools and native apps.
-          </p>
+        <div class="software-title-box">
+          <div class="eyebrow" data-reveal>Apps · Systems · Web</div>
+          <h1 class="software-page-title" data-reveal-lines>
+            <span class="line-mask"><span class="line-inner">Software</span></span>
+          </h1>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         2. ANIMATED OFFERINGS BENTO (DARK THEME)
+         2. FULL-WIDTH ANIMATED STRIP OF THE APPS WE BUILD
          ==================================================================== -->
-    <section class="section-space section-border-top" data-scroll-theme="dark">
+    <section class="projects-reel-section" data-scroll-theme="light" aria-label="Animated Reel of Apps We Build">
       <div class="container">
-        <div class="offerings-grid">
+        <div class="reel-header-bar" data-reveal>
+          <span>Live Project Reel · Apps &amp; Systems We Build</span>
+          <span>Hover to Pause &amp; Inspect →</span>
+        </div>
+      </div>
 
-          <!-- Offering 01: Modern Websites -->
-          <article class="offering-card" data-reveal>
-            <div class="offering-visual" aria-hidden="true">
-              <div class="anim-layout-box">
-                <div class="anim-bar-top"></div>
-                <div class="anim-bento-row">
-                  <div class="anim-bento-cell"></div>
-                  <div class="anim-bento-cell"></div>
-                </div>
+      <div class="reel-viewport" data-reveal style="--reveal-delay: 120ms;">
+        <div class="reel-track" id="software-reel-track">
+
+          <!-- Set 1 (6 Apps) -->
+          <a href="https://github.com/WillyderBezwinger123/taskcal" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>TaskCal.app</span>
+                <span style="color:#10b981;">● Flutter Sync</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:45%;animation-delay:0.8s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:82%;animation-delay:1.4s;"></div></div>
               </div>
             </div>
             <div>
-              <div class="eyebrow" style="margin-bottom: 10px;">01 / Web Systems</div>
-              <h2 class="offering-title">Modern, Mobile Websites</h2>
-              <p class="offering-desc">
-                Clean, responsive websites and fast one-pagers tailored for smartphones and desktop—giving customers a clear overview of your services and effortless ways to get in touch.
-              </p>
-              <div class="tag-list" style="margin-top: 18px;">
-                <span class="tag-chip">Responsive UI</span>
-                <span class="tag-chip">Fast One-Pagers</span>
-                <span class="tag-chip">Zero Bloat</span>
+              <div class="reel-app-meta">
+                <span>Cross-Platform App</span>
+                <span>Flutter · Firebase</span>
               </div>
+              <h2 class="reel-app-title">TaskCal</h2>
+              <p class="reel-app-desc">Windows &amp; Android task and calendar engine with real-time cloud sync.</p>
             </div>
-          </article>
+          </a>
 
-          <!-- Offering 02: Google Profiles & Local SEO -->
-          <article class="offering-card" data-reveal style="--reveal-delay: 100ms;">
-            <div class="offering-visual" aria-hidden="true">
-              <div class="anim-radar">
-                <div class="anim-radar-core"></div>
+          <a href="https://github.com/WillyderBezwinger123/PhotoVault" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>PhotoVault.exe</span>
+                <span style="color:#10b981;">● Local AI</span>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:auto;">
+                <div style="height:44px;border-radius:6px;background:rgba(16,185,129,0.22);border:1px solid #10b981;"></div>
+                <div style="height:44px;border-radius:6px;background:rgba(255,255,255,0.06);"></div>
+                <div style="height:44px;border-radius:6px;background:rgba(16,185,129,0.16);border:1px solid rgba(16,185,129,0.5);"></div>
               </div>
             </div>
             <div>
-              <div class="eyebrow" style="margin-bottom: 10px;">02 / Regional Discovery</div>
-              <h2 class="offering-title">Google Profiles &amp; Local Visibility</h2>
-              <p class="offering-desc">
-                Setting up and maintaining Google Business profiles (opening hours, photos, reviews), local SEO for Darmstadt (+15 km), and unified company information across all major portals.
-              </p>
-              <div class="tag-list" style="margin-top: 18px;">
-                <span class="tag-chip">Google Business</span>
-                <span class="tag-chip">Local SEO</span>
-                <span class="tag-chip">Unified Directories</span>
+              <div class="reel-app-meta">
+                <span>Desktop Application</span>
+                <span>On-Device AI</span>
               </div>
+              <h2 class="reel-app-title">PhotoVault</h2>
+              <p class="reel-app-desc">De-duplicate, organize, health-check, and search photo libraries locally.</p>
             </div>
-          </article>
+          </a>
 
-          <!-- Offering 03: Applied AI & Workflow Extras -->
-          <article class="offering-card" data-reveal>
-            <div class="offering-visual" aria-hidden="true">
-              <div class="anim-pipeline">
-                <div class="pipe-node">Request</div>
-                <div class="pipe-connector"></div>
-                <div class="pipe-node">AI Triage</div>
-                <div class="pipe-connector"></div>
-                <div class="pipe-node">Resolved</div>
+          <a href="https://github.com/AmineChr54/ForestVitality" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>ForestVitality</span>
+                <span style="color:#10b981;">● Sentinel-2</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div style="font-family:var(--font-mono);font-size:0.66rem;color:#10b981;">NDVI Index · Live Telemetry</div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:74%;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:58%;animation-delay:1.1s;"></div></div>
               </div>
             </div>
             <div>
-              <div class="eyebrow" style="margin-bottom: 10px;">03 / Intelligent Automation</div>
-              <h2 class="offering-title">AI Assistants &amp; Digital Extras</h2>
-              <p class="offering-desc">
-                Where it genuinely helps in daily operations, we add lightweight online appointment booking, structured digital inquiry forms, or custom AI assistants that reduce phone and office overhead.
-              </p>
-              <div class="tag-list" style="margin-top: 18px;">
-                <span class="tag-chip">Online Booking</span>
-                <span class="tag-chip">Smart Forms</span>
-                <span class="tag-chip">AI Copilots</span>
+              <div class="reel-app-meta">
+                <span>Geospatial Web</span>
+                <span>TypeScript · API</span>
               </div>
+              <h2 class="reel-app-title">ForestVitality</h2>
+              <p class="reel-app-desc">Satellite-based forest monitoring and real-time vegetation analysis.</p>
             </div>
-          </article>
+          </a>
 
-          <!-- Offering 04: Custom Software & Native Apps -->
-          <article class="offering-card" data-reveal style="--reveal-delay: 100ms;">
-            <div class="offering-visual" aria-hidden="true">
-              <div class="anim-sync-stack">
-                <div class="sync-device sync-device--desktop">
-                  <div style="width:45%;height:6px;background:#10b981;border-radius:4px;margin-bottom:8px;"></div>
-                  <div style="width:80%;height:4px;background:rgba(255,255,255,0.2);border-radius:4px;margin-bottom:6px;"></div>
-                  <div style="width:65%;height:4px;background:rgba(255,255,255,0.12);border-radius:4px;"></div>
-                </div>
-                <div class="sync-device sync-device--mobile">
-                  <div style="width:60%;height:5px;background:#10b981;border-radius:4px;margin-bottom:8px;"></div>
-                  <div style="width:85%;height:4px;background:rgba(255,255,255,0.2);border-radius:4px;"></div>
-                </div>
+          <a href="https://github.com/AmineChr54/HyperDraft" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>HyperDraft</span>
+                <span style="color:#10b981;">● LLM Ready</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:88%;animation-delay:0.4s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:62%;animation-delay:1.2s;"></div></div>
               </div>
             </div>
             <div>
-              <div class="eyebrow" style="margin-bottom: 10px;">04 / Product Engineering</div>
-              <h2 class="offering-title">Custom Software &amp; Apps</h2>
-              <p class="offering-desc">
-                Full-stack software engineering across TypeScript, Python, Flutter, C#, and Java—turning recurring problems into clean, standalone software products.
-              </p>
-              <div class="tag-list" style="margin-top: 18px;">
-                <span class="tag-chip">TypeScript / Next.js</span>
-                <span class="tag-chip">Flutter</span>
-                <span class="tag-chip">Python &amp; AI</span>
+              <div class="reel-app-meta">
+                <span>AI Copilot</span>
+                <span>TypeScript · LLM</span>
+              </div>
+              <h2 class="reel-app-title">HyperDraft</h2>
+              <p class="reel-app-desc">Summarizes email threads and drafts context-aware replies in seconds.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/WillyderBezwinger123/flash-gemini" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>Flash-Gemini</span>
+                <span style="color:#10b981;">● Fast Engine</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:79%;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:52%;animation-delay:0.9s;"></div></div>
               </div>
             </div>
-          </article>
+            <div>
+              <div class="reel-app-meta">
+                <span>AI Workflow</span>
+                <span>TypeScript · Gemini</span>
+              </div>
+              <h2 class="reel-app-title">Flash-Gemini</h2>
+              <p class="reel-app-desc">Modular high-speed TypeScript application for structured AI workflows.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/AmineChr54/AutoMeldung" target="_blank" rel="noopener" class="reel-app-card">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>AutoMeldung</span>
+                <span style="color:#10b981;">● PDF Pipeline</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:92%;animation-delay:0.5s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:66%;animation-delay:1.5s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>Desktop Tool</span>
+                <span>Python · Flet GUI</span>
+              </div>
+              <h2 class="reel-app-title">AutoMeldung</h2>
+              <p class="reel-app-desc">Automated Excel-to-PDF document generation and merging workflow.</p>
+            </div>
+          </a>
+
+          <!-- Set 2 (Duplicated for Seamless Infinite Loop) -->
+          <a href="https://github.com/WillyderBezwinger123/taskcal" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>TaskCal.app</span>
+                <span style="color:#10b981;">● Flutter Sync</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:45%;animation-delay:0.8s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:82%;animation-delay:1.4s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>Cross-Platform App</span>
+                <span>Flutter · Firebase</span>
+              </div>
+              <h2 class="reel-app-title">TaskCal</h2>
+              <p class="reel-app-desc">Windows &amp; Android task and calendar engine with real-time cloud sync.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/WillyderBezwinger123/PhotoVault" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>PhotoVault.exe</span>
+                <span style="color:#10b981;">● Local AI</span>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:auto;">
+                <div style="height:44px;border-radius:6px;background:rgba(16,185,129,0.22);border:1px solid #10b981;"></div>
+                <div style="height:44px;border-radius:6px;background:rgba(255,255,255,0.06);"></div>
+                <div style="height:44px;border-radius:6px;background:rgba(16,185,129,0.16);border:1px solid rgba(16,185,129,0.5);"></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>Desktop Application</span>
+                <span>On-Device AI</span>
+              </div>
+              <h2 class="reel-app-title">PhotoVault</h2>
+              <p class="reel-app-desc">De-duplicate, organize, health-check, and search photo libraries locally.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/AmineChr54/ForestVitality" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>ForestVitality</span>
+                <span style="color:#10b981;">● Sentinel-2</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div style="font-family:var(--font-mono);font-size:0.66rem;color:#10b981;">NDVI Index · Live Telemetry</div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:74%;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:58%;animation-delay:1.1s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>Geospatial Web</span>
+                <span>TypeScript · API</span>
+              </div>
+              <h2 class="reel-app-title">ForestVitality</h2>
+              <p class="reel-app-desc">Satellite-based forest monitoring and real-time vegetation analysis.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/AmineChr54/HyperDraft" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>HyperDraft</span>
+                <span style="color:#10b981;">● LLM Ready</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:88%;animation-delay:0.4s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:62%;animation-delay:1.2s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>AI Copilot</span>
+                <span>TypeScript · LLM</span>
+              </div>
+              <h2 class="reel-app-title">HyperDraft</h2>
+              <p class="reel-app-desc">Summarizes email threads and drafts context-aware replies in seconds.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/WillyderBezwinger123/flash-gemini" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>Flash-Gemini</span>
+                <span style="color:#10b981;">● Fast Engine</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:79%;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:52%;animation-delay:0.9s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>AI Workflow</span>
+                <span>TypeScript · Gemini</span>
+              </div>
+              <h2 class="reel-app-title">Flash-Gemini</h2>
+              <p class="reel-app-desc">Modular high-speed TypeScript application for structured AI workflows.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/AmineChr54/AutoMeldung" target="_blank" rel="noopener" class="reel-app-card" aria-hidden="true" tabindex="-1">
+            <div class="reel-app-preview">
+              <div class="reel-app-top">
+                <span>AutoMeldung</span>
+                <span style="color:#10b981;">● PDF Pipeline</span>
+              </div>
+              <div class="reel-mini-ui">
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:92%;animation-delay:0.5s;"></div></div>
+                <div class="reel-bar"><div class="reel-bar-fill" style="width:66%;animation-delay:1.5s;"></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="reel-app-meta">
+                <span>Desktop Tool</span>
+                <span>Python · Flet GUI</span>
+              </div>
+              <h2 class="reel-app-title">AutoMeldung</h2>
+              <p class="reel-app-desc">Automated Excel-to-PDF document generation and merging workflow.</p>
+            </div>
+          </a>
 
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         3. SELECTED PRIVATE GITHUB PROJECTS (SWITCH TO LIGHT THEME)
+         3. FEATURED SOFTWARE SHOWCASE (LIKE IN HOME — TASKCAL)
+         ==================================================================== -->
+    <section class="section-space" data-scroll-theme="dark">
+      <div class="container">
+        <div class="diptych">
+          <div class="diptych-copy" data-reveal>
+            <div class="eyebrow">01 · Software Showcase</div>
+            <h2 class="display-section">TaskCal</h2>
+            <p class="lead-copy" style="font-size: 1.08rem;">
+              A cross-platform task and calendar application built in <strong>Flutter for Windows and Android</strong>. Designed for zero-friction daily planning with instant real-time state synchronization across devices via Firebase.
+            </p>
+
+            <div class="tag-list">
+              <span class="tag-chip">Flutter &amp; Dart</span>
+              <span class="tag-chip">Windows + Android</span>
+              <span class="tag-chip">Firebase Real-Time Sync</span>
+              <span class="tag-chip">Custom Software</span>
+            </div>
+
+            <div style="margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="https://github.com/WillyderBezwinger123/taskcal" target="_blank" rel="noopener" class="btn-pill">
+                <span>Inspect Repository</span>
+                <span class="btn-pill-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Live TaskCal Multi-Device Sync Stage -->
+          <div class="showcase-stage" data-reveal style="--reveal-delay: 150ms;">
+            <div class="stage-window">
+              <div class="stage-topbar">
+                <div class="stage-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span>WillyderBezwinger123 / taskcal — Live Sync Engine</span>
+                <span class="pv-pulse-badge" id="tc-sync-badge">FIREBASE SYNC · 16ms</span>
+              </div>
+
+              <div class="stage-body">
+                <div class="tc-layout" id="tc-interactive-stage">
+                  <!-- Windows Desktop View -->
+                  <div class="tc-panel">
+                    <div class="tc-panel-header">
+                      <span>WINDOWS DESKTOP</span>
+                      <span>TODAY · OCT 21</span>
+                    </div>
+
+                    <div class="tc-task-item is-synced" data-task-idx="0">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Architecture review &amp; API schema</span>
+                      </div>
+                      <span class="tc-time-pill">09:30</span>
+                    </div>
+
+                    <div class="tc-task-item is-synced" data-task-idx="1">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Deploy real-time calendar listeners</span>
+                      </div>
+                      <span class="tc-time-pill">11:00</span>
+                    </div>
+
+                    <div class="tc-task-item" data-task-idx="2">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>On-site meeting in Darmstadt</span>
+                      </div>
+                      <span class="tc-time-pill">14:30</span>
+                    </div>
+
+                    <div class="tc-task-item" data-task-idx="3">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Ship prototype build v2.1</span>
+                      </div>
+                      <span class="tc-time-pill">17:00</span>
+                    </div>
+                  </div>
+
+                  <!-- Android Mobile Mirror -->
+                  <div class="tc-panel">
+                    <div class="tc-panel-header">
+                      <span>ANDROID MIRROR</span>
+                      <span style="color:#10b981;">● LIVE</span>
+                    </div>
+
+                    <div class="tc-task-item is-synced" data-mirror-idx="0">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>API schema</span>
+                      </div>
+                      <span class="tc-time-pill">Synced</span>
+                    </div>
+
+                    <div class="tc-task-item is-synced" data-mirror-idx="1">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Calendar listeners</span>
+                      </div>
+                      <span class="tc-time-pill">Synced</span>
+                    </div>
+
+                    <div class="tc-task-item" data-mirror-idx="2">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Darmstadt meeting</span>
+                      </div>
+                      <span class="tc-time-pill">14:30</span>
+                    </div>
+
+                    <div class="tc-task-item" data-mirror-idx="3">
+                      <div class="tc-task-left">
+                        <span class="tc-check">✓</span>
+                        <span>Prototype v2.1</span>
+                      </div>
+                      <span class="tc-time-pill">17:00</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pv-metrics-bar">
+                  <span id="tc-live-status">Click any task to test instant cross-device state sync</span>
+                  <span>Flutter · Dart · Firebase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. WEBSITE SHOWCASE (SAME LAYOUT, INTENTIONALLY LEFT A BIT OPEN)
          ==================================================================== -->
     <section class="section-space section-border-top" data-scroll-theme="light">
       <div class="container">
-        <div style="margin-bottom: clamp(40px, 5vw, 68px);">
-          <div class="eyebrow" data-reveal>Engineering Archive · GitHub</div>
-          <h2 class="display-section" data-reveal-lines>
-            <span class="line-mask"><span class="line-inner">Selected private projects.</span></span>
-          </h2>
-        </div>
-
-        <div class="capabilities-list">
-          <a href="https://github.com/WillyderBezwinger123/PhotoVault" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">01</span>
-            <h3 class="capability-title">PhotoVault</h3>
-            <p class="capability-desc">
-              Desktop application to de-duplicate, organize, health-check, and back up personal photo libraries with on-device AI search. (Hermann)
+        <div class="diptych">
+          <div class="diptych-copy" data-reveal>
+            <div class="eyebrow">02 · Web &amp; Local Visibility · Open Canvas</div>
+            <h2 class="display-section">Modern Websites</h2>
+            <p class="lead-copy" style="font-size: 1.08rem;">
+              Alongside custom apps, we design and build fast, mobile-first websites, curated Google Business profiles, and lightweight booking or AI tools for local businesses in Darmstadt (+15 km).
             </p>
-            <span class="capability-arrow">↗</span>
-          </a>
-
-          <a href="https://github.com/WillyderBezwinger123/taskcal" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">02</span>
-            <h3 class="capability-title">TaskCal</h3>
-            <p class="capability-desc">
-              Cross-platform personal task &amp; calendar application built with Flutter for Windows and Android with real-time Firebase sync. (Hermann)
+            <p class="lead-copy" style="font-size: 0.98rem;">
+              Because we are just starting out and building our first local client references—<strong>initially free of charge</strong>—this showcase slot is intentionally left open for our first partner projects.
             </p>
-            <span class="capability-arrow">↗</span>
-          </a>
 
-          <a href="https://github.com/AmineChr54/ForestVitality" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">03</span>
-            <h3 class="capability-title">ForestVitality</h3>
-            <p class="capability-desc">
-              Satellite-based forest monitoring system using Sentinel-2 imagery, vegetation indices, and interactive geospatial mapping. (Amine)
-            </p>
-            <span class="capability-arrow">↗</span>
-          </a>
+            <div class="tag-list">
+              <span class="tag-chip">Mobile-First Web</span>
+              <span class="tag-chip">Google Profile &amp; Local SEO</span>
+              <span class="tag-chip">Initially Free (0 €)</span>
+              <span class="tag-chip">Open Partner Slot</span>
+            </div>
 
-          <a href="https://github.com/AmineChr54/HyperDraft" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">04</span>
-            <h3 class="capability-title">HyperDraft</h3>
-            <p class="capability-desc">
-              Context-aware AI email copilot that summarizes threads and drafts polished replies in seconds. (Amine)
-            </p>
-            <span class="capability-arrow">↗</span>
-          </a>
+            <div style="margin-top: 12px;">
+              <a href="contact.html" class="btn-pill">
+                <span>Become our first showcase</span>
+                <span class="btn-pill-arrow">→</span>
+              </a>
+            </div>
+          </div>
 
-          <a href="https://github.com/WillyderBezwinger123/flash-gemini" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">05</span>
-            <h3 class="capability-title">Flash-Gemini</h3>
-            <p class="capability-desc">
-              High-speed TypeScript workflow engine powered by the Gemini API for rapid structured generation. (Hermann)
-            </p>
-            <span class="capability-arrow">↗</span>
-          </a>
+          <!-- Interactive Open Website Blueprint Window -->
+          <div class="showcase-stage" data-reveal style="--reveal-delay: 150ms;">
+            <div class="stage-window">
+              <div class="stage-topbar">
+                <div class="stage-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span>https://your-business-darmstadt.de — Blueprint</span>
+                <span class="pv-pulse-badge">OPEN SLOT · 01</span>
+              </div>
 
-          <a href="https://github.com/AmineChr54/AutoMeldung" target="_blank" rel="noopener" class="capability-row" data-reveal>
-            <span class="capability-index">06</span>
-            <h3 class="capability-title">AutoMeldung</h3>
-            <p class="capability-desc">
-              Python desktop automation tool with a modern Flet GUI that generates and merges structured PDFs directly from Excel data. (Amine)
-            </p>
-            <span class="capability-arrow">↗</span>
-          </a>
+              <div class="stage-body">
+                <div class="web-blueprint-canvas" id="web-blueprint-stage">
+                  <div class="web-bp-nav">
+                    <span class="web-bp-logo-placeholder">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#10b981;"></span>
+                      <span>[Your Business Name]</span>
+                    </span>
+                    <div class="web-bp-pills">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+
+                  <div class="web-bp-hero-slot">
+                    <div class="web-bp-lines">
+                      <div class="web-bp-line web-bp-line--accent"></div>
+                      <div class="web-bp-line" style="width: 90%;"></div>
+                      <div class="web-bp-line" style="width: 74%;"></div>
+                      <div style="margin-top:8px;font-family:var(--font-mono);font-size:0.68rem;color:#989690;">
+                        Fast loading · Mobile ready · Clear contact
+                      </div>
+                    </div>
+
+                    <div class="web-bp-open-card">
+                      <span>+ RESERVED FOR FIRST PARTNER</span>
+                      <span style="color:#989690;font-size:0.65rem;">Custom design &amp; live prototype built around your workflow</span>
+                    </div>
+                  </div>
+
+                  <div class="web-bp-cards-row" id="web-bp-modules">
+                    <div class="web-bp-mini-slot is-highlighted">
+                      01 · Responsive One-Pager
+                    </div>
+                    <div class="web-bp-mini-slot">
+                      02 · Google Maps &amp; SEO
+                    </div>
+                    <div class="web-bp-mini-slot">
+                      03 · Smart Inquiry / Booking
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pv-metrics-bar">
+                  <span id="web-bp-status">Blueprint Module: Responsive One-Pager &amp; Mobile View</span>
+                  <span>Darmstadt (+15 km)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
