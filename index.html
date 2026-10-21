@@ -1,313 +1,234 @@
 <!doctype html>
-<html lang="de" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Braincel — Moderne Websites, Sichtbarkeit &amp; KI-Lösungen in Darmstadt</title>
-  <meta name="description" content="Braincel — Hermann & Amine, zwei Informatik-Studenten der TU Darmstadt. Moderne Websites, gepflegte Google-Profile, lokale Sichtbarkeit & praktische KI-Werkzeuge für Betriebe in Darmstadt (+15 km).">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Braincel — Hermann & Amine · Darmstadt">
-  <meta property="og:description" content="Moderne Websites, gepflegte Google-Profile und praktische KI-Lösungen für lokale Betriebe in Darmstadt (+15 km) – schnell, persönlich und am Anfang kostenlos.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Braincel — Modern Web, Software &amp; Applied AI</title>
+  <meta name="description" content="Braincel — Hermann & Amine (TU Darmstadt). Modern websites, software products, local visibility, and practical AI tools.">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="page-entering" data-theme="light">
 
   <!-- ====================================================================
-       STICKY STARTUP NAVBAR
+       GLOBAL HEADER (4 PAGES: HOME, SOFTWARE, ABOUT US, CONTACT)
        ==================================================================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand-logo" aria-label="Braincel Startseite">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-dot"></span>
-        </span>
-        <span class="brand-name">Braincel</span>
-        <span class="brand-tag">Darmstadt</span>
+  <header class="global-header">
+    <nav class="global-nav" aria-label="Primary Navigation">
+      <a href="index.html" class="brand-wordmark">
+        <span class="brand-wordmark-dot"></span>
+        <span>Braincel</span>
       </a>
 
-      <nav class="nav-links" id="nav-links" aria-label="Hauptnavigation">
-        <a href="#leistungen" class="nav-link">Was wir bieten</a>
-        <a href="#ueber-uns" class="nav-link">Über uns</a>
-        <a href="#projekte" class="nav-link">Unsere Projekte</a>
-        <a href="#kontakt" class="nav-link">Kontakt</a>
-        <a href="#impressum" class="nav-link">Impressum</a>
-      </nav>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">Menu</button>
 
-      <div class="header-cta">
-        <a href="#kontakt" class="btn btn-primary btn-sm">Unverbindlich anfragen</a>
-        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
+      <ul class="nav-list" id="nav-list">
+        <li class="nav-item"><a href="index.html" class="is-active">Home</a></li>
+        <li class="nav-item"><a href="software.html">Software</a></li>
+        <li class="nav-item"><a href="about.html">About Us</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <!-- ====================================================================
-         1. HERO SECTION + WIE WIR ARBEITEN (3 PRINCIPLES)
+         1. HERO — INSTRUMENT-STYLE LINE REVEAL (LIGHT THEME)
          ==================================================================== -->
-    <section class="hero-section">
+    <section class="hero-block" data-scroll-theme="light">
       <div class="container">
-        <div class="hero-content">
-          <div class="eyebrow-pill">
-            <span class="status-dot"></span>
-            <span id="hero-badge">Darmstadt (+15 km) · TU Darmstadt Informatik · Am Anfang kostenlos</span>
-          </div>
+        <div class="eyebrow" data-reveal>Darmstadt · Digital Craft &amp; Engineering</div>
 
-          <h1 class="hero-title" id="hero-title">
-            Moderne Websites, lokale Sichtbarkeit &amp; praktische KI-Lösungen.
-          </h1>
+        <h1 class="display-hero" data-reveal-lines>
+          <span class="line-mask"><span class="line-inner">We make the</span></span>
+          <span class="line-mask"><span class="line-inner">complex simple.</span></span>
+        </h1>
 
-          <p class="hero-subtitle" id="hero-subtitle">
-            Hallo, wir sind <strong>Hermann und Amine</strong> von Braincel — zwei Informatik-Studenten der TU Darmstadt. Wir helfen lokalen Betrieben in Darmstadt und Umgebung (+15 km), online besser gefunden zu werden und echte Alltagsprobleme mit modernen Websites, gepflegten Google-Profilen und einfachen KI-Werkzeugen zu lösen.
+        <div class="hero-footer-row">
+          <p class="lead-copy" data-reveal style="--reveal-delay: 180ms;">
+            We bring engineering and design together to build <strong>modern websites, local digital visibility, and practical AI software</strong> that help businesses and people in Darmstadt move forward—fast, personal, and initially free.
           </p>
 
-          <div class="hero-actions">
-            <a href="#kontakt" class="btn btn-primary">Kostenloses Erstgespräch anfragen</a>
-            <a href="#projekte" class="btn btn-secondary">Unsere Projekte &amp; Erfahrung</a>
-          </div>
-        </div>
-
-        <!-- 3 Core Principles from Obsidian ("Wie wir arbeiten") -->
-        <div class="principles-grid" id="principles-grid">
-          <article class="principle-card">
-            <div class="principle-step">01 · Grundsatz</div>
-            <h2 class="principle-title">Erst verstehen, dann bauen</h2>
-            <p class="principle-desc">
-              Wir hören persönlich zu und fragen nach den echten Problemen im Tagesgeschäft, bevor wir eine technische Lösung vorschlagen.
-            </p>
-          </article>
-
-          <article class="principle-card">
-            <div class="principle-step">02 · Grundsatz</div>
-            <h2 class="principle-title">Schnell und praktisch</h2>
-            <p class="principle-desc">
-              Kleine, sofort funktionierende Ergebnisse und klickbare Entwürfe statt monatelanger theoretischer Pläne oder komplizierter Fachsprache.
-            </p>
-          </article>
-
-          <article class="principle-card">
-            <div class="principle-step">03 · Grundsatz</div>
-            <h2 class="principle-title">Am Anfang kostenlos</h2>
-            <p class="principle-desc">
-              Wir gehen in Vorleistung, sammeln praktische Erfahrung und bauen echtes Vertrauen in der Region Darmstadt auf – ganz ohne Risiko.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         2. WAS WIR BIETEN (SERVICES)
-         ==================================================================== -->
-    <section class="section" id="leistungen">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Was wir machen</span>
-          <h2 class="section-title">Schwerpunkt: Websites, Sichtbarkeit &amp; digitale Entlastung</h2>
-          <p class="section-lead">
-            Wir konzentrieren uns auf das, was lokalen Betrieben sofort im Alltag hilft: ein klarer Auftritt im Netz, beste Auffindbarkeit in der Region und einfache Werkzeuge, die Zeit sparen.
-          </p>
-        </div>
-
-        <div class="services-grid" id="services-grid">
-          <!-- Rendered from site-data.json with static fallback -->
-        </div>
-
-        <!-- Transparent Pricing Note from Obsidian -->
-        <div class="pricing-banner">
-          <div class="pricing-banner-left">
-            <span class="badge-subtle">Transparent &amp; Fair</span>
-            <h3>Warum starten wir aktuell kostenlos?</h3>
-            <p>
-              Wir möchten uns in Darmstadt und Umgebung durch echte Ergebnisse beweisen, Erfahrung mit lokalen Unternehmen sammeln und langfristige Kontakte knüpfen. Erst wenn Sie mit dem Ergebnis rundum zufrieden sind und sich eine weiterführende Betreuung wünschen, sprechen wir offen über ein faires Modell.
-            </p>
-          </div>
-          <div class="pricing-banner-right">
-            <a href="#kontakt" class="btn btn-primary">Unverbindlich kennenlernen</a>
+          <div class="btn-group" data-reveal style="--reveal-delay: 280ms;">
+            <a href="software.html" class="btn-pill">
+              <span>Explore Software</span>
+              <span class="btn-pill-arrow">→</span>
+            </a>
+            <a href="about.html" class="btn-pill btn-pill--outline">
+              <span>Who we are</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         3. ÜBER UNS (HERMANN & AMINE)
+         2. FEATURED GITHUB PROJECT SHOWCASE (SCROLL SWITCH TO DARK THEME)
          ==================================================================== -->
-    <section class="section section-alt" id="ueber-uns">
+    <section class="section-space section-border-top" data-scroll-theme="dark">
       <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Wer wir sind</span>
-          <h2 class="section-title">Persönlich vor Ort in Darmstadt — von der Idee bis zum Code</h2>
-          <p class="section-lead">
-            Wir sind Hermann und Amine, beide im 5. Semester Bachelor Informatik an der TU Darmstadt. Bei uns gibt es keine anonymen Zwischenstationen: Wir übernehmen gemeinsam Recherche, das persönliche Gespräch und die komplette technische Umsetzung.
-          </p>
-        </div>
-
-        <div class="founders-grid" id="founders-grid">
-          <!-- Rendered from site-data.json -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         4. UNSERE PRIVATEN PROJEKTE & ERFAHRUNG (NO CUSTOMER DEMOS)
-         ==================================================================== -->
-    <section class="section" id="projekte">
-      <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="section-kicker">Technische Erfahrung</span>
-            <h2 class="section-title">Ausgewählte eigene Software- &amp; KI-Projekte</h2>
-            <p class="section-lead">
-              Einblick in unsere eigenen Entwicklungen, Open-Source-Projekte und Forschungsarbeiten aus Studium und Freizeit – ohne vertrauliche Kundendaten.
-            </p>
-          </div>
-
-          <div class="filter-pills" id="project-filters" role="tablist" aria-label="Projekte filtern">
-            <button type="button" class="filter-pill active" data-filter="all">Alle Projekte</button>
-            <button type="button" class="filter-pill" data-filter="hermann">Hermann</button>
-            <button type="button" class="filter-pill" data-filter="amine">Amine</button>
-          </div>
-        </div>
-
-        <div class="projects-grid" id="projects-grid">
-          <!-- Rendered from site-data.json -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         5. KONTAKT SECTION
-         ==================================================================== -->
-    <section class="section section-alt" id="kontakt">
-      <div class="container">
-        <div class="contact-layout">
-          <!-- Left Column: Direct Contact Info & Trust Promise -->
-          <div class="contact-info">
-            <span class="section-kicker">Kontakt</span>
-            <h2 class="section-title">Lassen Sie uns unverbindlich sprechen.</h2>
-            <p class="contact-lead">
-              Egal ob Sie einen lokalen Betrieb in Darmstadt (+15 km) führen, eine Frage zu unserer Arbeit haben oder sich einfach mit uns austauschen möchten: Wir freuen uns über Ihre Nachricht.
+        <div class="diptych">
+          <div class="diptych-copy" data-reveal>
+            <div class="eyebrow">Featured Repository · Open Source</div>
+            <h2 class="display-section">PhotoVault</h2>
+            <p class="lead-copy" style="font-size: 1.08rem;">
+              Picked directly from our engineering lab: a native desktop system built to de-duplicate, health-check, organize, and back up personal photo libraries—powered by <strong>100% private, on-device AI semantic search</strong>.
             </p>
 
-            <div class="contact-cards">
-              <a href="mailto:kontakt@braincel.de" class="contact-card">
-                <div class="contact-card-label">E-Mail (Direktkontakt)</div>
-                <div class="contact-card-value">kontakt@braincel.de</div>
-                <div class="contact-card-sub">Oder direkt an hermann@braincel.de / amine@braincel.de</div>
+            <div class="tag-list">
+              <span class="tag-chip">On-Device AI</span>
+              <span class="tag-chip">Perceptual Hashing</span>
+              <span class="tag-chip">Health Check</span>
+              <span class="tag-chip">Desktop Engineering</span>
+            </div>
+
+            <div style="margin-top: 12px; display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="https://github.com/WillyderBezwinger123/PhotoVault" target="_blank" rel="noopener" class="btn-pill">
+                <span>View on GitHub</span>
+                <span class="btn-pill-arrow">↗</span>
               </a>
-
-              <div class="contact-card">
-                <div class="contact-card-label">Telefon &amp; Vor-Ort-Termin</div>
-                <div class="contact-card-value placeholder-highlight">[+49 151 XXXXXXXX eintragen]</div>
-                <div class="contact-card-sub">Kurzes 15-Minuten-Gespräch telefonisch oder bei Ihnen vor Ort in Darmstadt (+15 km)</div>
-              </div>
-
-              <div class="contact-card">
-                <div class="contact-card-label">Profile &amp; Code</div>
-                <div class="contact-links-inline">
-                  <a href="https://github.com/WillyderBezwinger123" target="_blank" rel="noopener">GitHub (Hermann) ↗</a>
-                  <a href="https://github.com/AmineChr54" target="_blank" rel="noopener">GitHub (Amine) ↗</a>
-                  <a href="https://www.linkedin.com/in/aminechr/" target="_blank" rel="noopener">LinkedIn (Amine) ↗</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="trust-box">
-              <strong>Unser Grundsatz:</strong> Jede Nachricht wird von uns persönlich gelesen und beantwortet. Wir versenden keine automatisierten Werbemails und respektieren jedes „Nein“ sofort.
+              <a href="software.html" class="btn-pill btn-pill--outline">
+                <span>All Offerings</span>
+              </a>
             </div>
           </div>
 
-          <!-- Right Column: Single Clean Contact Form -->
-          <div class="contact-form-card">
-            <h3 class="form-title">Nachricht senden</h3>
-            <p class="form-subtitle">Wir melden uns in der Regel innerhalb von 24 Stunden persönlich zurück.</p>
-
-            <form id="contact-form" class="contact-form">
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="input-name">Name *</label>
-                  <input type="text" id="input-name" name="name" required placeholder="Ihr Vor- und Nachname">
+          <!-- Interactive Live Visualizer for PhotoVault -->
+          <div class="showcase-stage" data-reveal style="--reveal-delay: 150ms;">
+            <div class="stage-window">
+              <div class="stage-topbar">
+                <div class="stage-dots">
+                  <span></span><span></span><span></span>
                 </div>
-                <div class="form-field">
-                  <label for="input-company">Betrieb / Organisation (optional)</label>
-                  <input type="text" id="input-company" name="company" placeholder="z. B. Handwerksbetrieb in Darmstadt">
+                <span>WillyderBezwinger123 / PhotoVault — Engine v1.4</span>
+                <span class="pv-pulse-badge">LOCAL AI READY</span>
+              </div>
+
+              <div class="stage-body">
+                <div class="pv-search-bar">
+                  <span id="pv-live-query">search: "architecture &amp; daylight"</span>
+                  <span style="color: #10b981;">⌘K</span>
+                </div>
+
+                <div class="pv-grid" id="pv-interactive-grid">
+                  <div class="pv-tile is-active">
+                    <span class="pv-tile-tag">IMG_0412.RAW</span>
+                    <span class="pv-tile-score">0.98 match</span>
+                  </div>
+                  <div class="pv-tile is-duplicate">
+                    <span class="pv-tile-tag">IMG_0413.JPG</span>
+                    <span class="pv-tile-score" style="color:#f59e0b;">Duplicate</span>
+                  </div>
+                  <div class="pv-tile is-duplicate">
+                    <span class="pv-tile-tag">IMG_0413_copy.JPG</span>
+                    <span class="pv-tile-score" style="color:#f59e0b;">Cluster #2</span>
+                  </div>
+                  <div class="pv-tile is-active">
+                    <span class="pv-tile-tag">DA_STUDIO_09.RAW</span>
+                    <span class="pv-tile-score">0.94 match</span>
+                  </div>
+                  <div class="pv-tile">
+                    <span class="pv-tile-tag">ARCHIVE_118.CR3</span>
+                    <span class="pv-tile-score">Verified ✓</span>
+                  </div>
+                  <div class="pv-tile">
+                    <span class="pv-tile-tag">ARCHIVE_119.CR3</span>
+                    <span class="pv-tile-score">Verified ✓</span>
+                  </div>
+                  <div class="pv-tile is-active">
+                    <span class="pv-tile-tag">LIGHT_GRID.PNG</span>
+                    <span class="pv-tile-score">0.91 match</span>
+                  </div>
+                  <div class="pv-tile">
+                    <span class="pv-tile-tag">BACKUP_SYNC.TAR</span>
+                    <span class="pv-tile-score">Healthy ✓</span>
+                  </div>
+                </div>
+
+                <div class="pv-metrics-bar">
+                  <span id="pv-live-status">CLIP Embeddings · 3 matches (12ms)</span>
+                  <span>Zero Cloud Upload · 100% Local</span>
                 </div>
               </div>
-
-              <div class="form-field">
-                <label for="input-contact">E-Mail-Adresse oder Telefonnummer *</label>
-                <input type="text" id="input-contact" name="contact" required placeholder="Wie können wir Sie am besten erreichen?">
-              </div>
-
-              <div class="form-field">
-                <label for="input-message">Worum geht es? *</label>
-                <textarea id="input-message" name="message" rows="4" required placeholder="Beschreiben Sie kurz Ihr Anliegen, Ihre Frage oder wann es Ihnen zeitlich gut passt..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-full">Nachricht absenden</button>
-              <p class="form-privacy-hint">
-                Mit dem Absenden werden Ihre Angaben ausschließlich zur persönlichen Beantwortung Ihrer Anfrage verwendet (kein Newsletter, keine Weitergabe an Dritte).
-              </p>
-              <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         6. CUSTOM IMPRESSUM & DATENSCHUTZ
+         3. PRODUCTS & POSSIBILITIES OVERVIEW (SCROLL SWITCH TO LIGHT THEME)
          ==================================================================== -->
-    <section class="section impressum-section" id="impressum">
+    <section class="section-space section-border-top" data-scroll-theme="light">
       <div class="container">
-        <div class="impressum-card">
-          <div class="impressum-header">
-            <span class="section-kicker">Rechtliche Angaben</span>
-            <h2 class="impressum-title">Impressum &amp; Datenschutzhinweis</h2>
-            <p class="impressum-note">
-              Hinweis für den Prototyp: Bitte die <span class="placeholder-badge">[markierten Platzhalter]</span> vor Veröffentlichung mit euren vollständigen Kontaktdaten ausfüllen.
+        <div style="margin-bottom: clamp(44px, 6vw, 76px);">
+          <div class="eyebrow" data-reveal>Possibilities &amp; Products</div>
+          <h2 class="display-section" data-reveal-lines>
+            <span class="line-mask"><span class="line-inner">What we build together.</span></span>
+          </h2>
+        </div>
+
+        <div class="capabilities-list">
+          <a href="software.html" class="capability-row" data-reveal>
+            <span class="capability-index">01</span>
+            <h3 class="capability-title">Modern Web Architecture</h3>
+            <p class="capability-desc">
+              Fast, mobile-first websites and expressive one-pagers designed so customers immediately understand what you offer and how to reach you.
+            </p>
+            <span class="capability-arrow">↗</span>
+          </a>
+
+          <a href="software.html" class="capability-row" data-reveal style="--reveal-delay: 80ms;">
+            <span class="capability-index">02</span>
+            <h3 class="capability-title">Local Visibility &amp; Search</h3>
+            <p class="capability-desc">
+              Curated Google Business profiles, local SEO for Darmstadt (+15 km), and consistent company data across every map and directory.
+            </p>
+            <span class="capability-arrow">↗</span>
+          </a>
+
+          <a href="software.html" class="capability-row" data-reveal style="--reveal-delay: 160ms;">
+            <span class="capability-index">03</span>
+            <h3 class="capability-title">Applied AI &amp; Automation</h3>
+            <p class="capability-desc">
+              Lightweight booking flows, structured digital intake forms, and practical AI assistants that take repetitive work off your desk.
+            </p>
+            <span class="capability-arrow">↗</span>
+          </a>
+
+          <a href="software.html" class="capability-row" data-reveal style="--reveal-delay: 240ms;">
+            <span class="capability-index">04</span>
+            <h3 class="capability-title">Custom Software Products</h3>
+            <p class="capability-desc">
+              From cross-platform Flutter apps like TaskCal to on-device AI tools like PhotoVault and geospatial analytics like ForestVitality.
+            </p>
+            <span class="capability-arrow">↗</span>
+          </a>
+        </div>
+
+        <!-- Instrument-Style "At a Glance" Metrics -->
+        <div class="glance-grid" style="margin-top: clamp(64px, 8vw, 112px);">
+          <div class="glance-item" data-reveal>
+            <div class="glance-number" data-count="2" data-prefix="0">02</div>
+            <div class="glance-label">Engineers in the same room</div>
+            <p class="glance-desc">
+              Hermann &amp; Amine—5th-semester Computer Science students at TU Darmstadt handling research, design, and code directly.
             </p>
           </div>
 
-          <div class="impressum-grid">
-            <div class="impressum-col">
-              <h3>Angaben gemäß § 5 DDG</h3>
-              <p>
-                <strong>Braincel</strong><br>
-                Hermann <span class="placeholder-highlight">[Nachname eintragen]</span> &amp; Amine Cheikhrouhou<br>
-                <span class="placeholder-highlight">[Straße und Hausnummer eintragen]</span><br>
-                64283 Darmstadt<br>
-                Deutschland
-              </p>
+          <div class="glance-item" data-reveal style="--reveal-delay: 100ms;">
+            <div class="glance-number" data-count="15" data-prefix="+" data-suffix=" km">+15 km</div>
+            <div class="glance-label">Darmstadt &amp; Region</div>
+            <p class="glance-desc">
+              We work personally and locally—listening first to real operational bottlenecks before proposing any software.
+            </p>
+          </div>
 
-              <h3 style="margin-top: 24px;">Kontakt</h3>
-              <p>
-                Telefon: <span class="placeholder-highlight">[+49 151 XXXXXXXX eintragen]</span><br>
-                E-Mail: <a href="mailto:kontakt@braincel.de">kontakt@braincel.de</a><br>
-                Direkt: <a href="mailto:hermann@braincel.de">hermann@braincel.de</a> · <a href="mailto:amine@braincel.de">amine@braincel.de</a>
-              </p>
-            </div>
-
-            <div class="impressum-col">
-              <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-              <p>
-                Hermann <span class="placeholder-highlight">[Nachname eintragen]</span> &amp; Amine Cheikhrouhou<br>
-                <span class="placeholder-highlight">[Straße und Hausnummer eintragen]</span><br>
-                64283 Darmstadt
-              </p>
-
-              <h3 style="margin-top: 24px;">Datenschutz &amp; Grundsätze (DSGVO)</h3>
-              <p class="impressum-small">
-                <strong>1. Keine Tracking-Cookies oder Werbe-Tracker:</strong> Diese Website verwendet keine Analyse- oder Werbe-Cookies von Drittanbietern.<br>
-                <strong>2. Kontaktaufnahme:</strong> Wenn Sie uns per Kontaktformular, E-Mail oder Telefon kontaktieren, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage durch Hermann und Amine gespeichert und niemals ohne Ihre Einwilligung an Dritte weitergegeben.<br>
-                <strong>3. Öffentliche Daten &amp; Widerruf:</strong> Wir speichern im Rahmen unserer Arbeit ausschließlich öffentlich zugängliche Firmendaten und löschen Kontaktdaten auf Wunsch jederzeit unverzüglich (kurze Nachricht an <a href="mailto:kontakt@braincel.de">kontakt@braincel.de</a> genügt).
-              </p>
-            </div>
+          <div class="glance-item" data-reveal style="--reveal-delay: 200ms;">
+            <div class="glance-number" data-count="0" data-suffix=" €">0 €</div>
+            <div class="glance-label">Initial Prototype</div>
+            <p class="glance-desc">
+              We start free of charge to build genuine trust, real-world references, and lasting relationships in our region.
+            </p>
           </div>
         </div>
       </div>
@@ -315,28 +236,20 @@
   </main>
 
   <!-- ====================================================================
-       CLEAN STARTUP FOOTER
+       GLOBAL FOOTER
        ==================================================================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <span class="brand-name">Braincel</span>
-        <span class="footer-divider">·</span>
-        <span>Hermann &amp; Amine (TU Darmstadt)</span>
-        <span class="footer-divider">·</span>
-        <span>Darmstadt (+15 km)</span>
-      </div>
-
-      <div class="footer-right">
-        <a href="#leistungen">Was wir bieten</a>
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#projekte">Projekte</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#impressum">Impressum &amp; Datenschutz</a>
+  <footer class="global-footer">
+    <div class="container footer-row">
+      <div>© 2026 Braincel · Hermann &amp; Amine · Darmstadt</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="software.html">Software</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <script src="scripts/app.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
